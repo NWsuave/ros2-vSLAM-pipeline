@@ -1,0 +1,38 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+
+Visualization Manager:
+  Class: ""
+  Fixed Frame: map
+
+  Displays:
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+
+    - Class: rviz_default_plugins/Map
+      Name: 2D Map (/map)
+      Enabled: true
+      Topic: /map
+      Alpha: 0.7
+
+    - Class: rviz_default_plugins/PointCloud2
+      Name: 3D Cloud (/rtabmap/cloud_map)
+      Enabled: true
+      Topic: /rtabmap/cloud_map
+      Style: Points
+      Size (m): 0.03
+      Color Transformer: RGB
+
+    - Class: rviz_default_plugins/Image
+      Name: Camera (/image_raw/bgr8)
+      Enabled: true
+      Topic: /image_raw/bgr8
+
+Views:
+  Current:
+    Class: rviz_default_plugins/Orbit
+    Name: Orbit
